@@ -11,6 +11,7 @@ import { MainComponent } from './components/main/main.component';
 import { HijoComponent } from './components/hijo/hijo.component';
 import { RepetirDirective } from './directives/repetir.directive';
 import { ProductosComponent } from './components/productos/productos.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductosComponent } from './components/productos/productos.component';
     MainComponent,
     HijoComponent,
     RepetirDirective,
-    ProductosComponent
+    ProductosComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
