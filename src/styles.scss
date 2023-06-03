@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+  background: #f3f7f9;
+  height: 100vh;
+}
+
+.kmenu{
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.keyrus-content{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.keyrus-content label{
+  width: 200px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+}

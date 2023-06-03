@@ -1,0 +1,9 @@
+<div class="content pl-3 pr-3">
+  <p>Clase Angular!</p>
+  <button class="button" (click)="setVisible()" >Mostra / ocultar</button>
+  {{ nombre}}
+  <div class="control" [hidden]="visible">
+    <input class="input" type="text" placeholder="Normal input"  [(ngModel)]="nombre"  >
+  </div>
+  <app-hijo></app-hijo>
+</div>

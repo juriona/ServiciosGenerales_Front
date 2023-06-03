@@ -1,0 +1,89 @@
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Productos
+    </p>
+    <div class="card-header-icon">
+      <button class="button is-success is-small" (click)="crearProducto()">
+        <span class="icon ">
+          <i class="bx bx-plus"></i>
+        </span>
+        <span> Nuevo </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="card-content">
+
+    <div class="content">
+        <table class="table">
+          <thead>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Categoria</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productos">
+              <td>{{producto.nombre}}</td>
+              <td >{{producto.precio | currency: 'Bs. '}}</td>
+              <td>{{producto.cantidad}}</td>
+              <td>{{producto.categoria}}</td>
+              <td>
+                <a (click)="mostrarProducto(producto.id)"><i class='bx bxs-pencil has-text-link pr-2' ></i></a>
+                <a (click)="borrarProducto(producto.id)" ><i class='bx bxs-trash-alt has-text-danger' ></i> </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal" [class.is-active]="dialog" >
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head ">
+      <p class="modal-card-title">{{ title() }}</p>
+      <button class="delete" aria-label="close" (click)="closeModal()"></button>
+          <!-- <p class="modal-card-title "></p>
+          <div class="is-flex is-justify-content-end">
+            <button class="close " aria-label="close" "></button>
+          </div> -->
+
+
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+      <div class="columns ">
+        <div class="column is-7">
+          <div class="keyrus-content">
+            <label for="" > Nombre:  </label>
+            <input class="input" type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nombre" >
+          </div>
+          <div class="keyrus-content">
+            <label for="">Precio: </label>
+            <input class="input" type="text" placeholder="Precio" [(ngModel)]="precio">
+          </div>
+          <div class="keyrus-content">
+            <label for="">Cantidad: </label>
+            <input class="input" type="text" placeholder="Cantidad" [(ngModel)]="cantidad">
+          </div>
+          <div class="keyrus-content">
+            <label for="">Categoria: </label>
+            <input class="input" type="text" placeholder="Categoria" [(ngModel)]="categoria">
+          </div>
+        </div>
+        <!-- picture -->
+        <div class="column">
+
+        </div>
+      </div>
+    </section>
+    <footer class="modal-card-foot is-flex ">
+      <button class="button is-success" (click)="guardarProducto()" >Guardar</button>
+      <button class="button" (click)="closeModal()">Cancelar</button>
+    </footer>
+  </div>
+</div>
