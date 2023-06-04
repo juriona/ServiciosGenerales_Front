@@ -1,0 +1,106 @@
+<div class="columns">
+  <div class="column is-6">
+    <!-- <div class="card">
+      <div class="card-header">
+        <span class="card-header-title"> <i class='bx bxs-cart pr-3' ></i> Productos</span>
+      </div>
+      <div class="card-content">
+        <table></table>
+      </div>
+
+    </div> -->
+
+    <article class="panel ">
+      <div class="panel-heading subtitle">
+        <i class='bx bxs-user pr-3' ></i>
+        <div class="select is-info pl-3 pr-3 is-small">
+          <select [(ngModel)]="cliente" >
+            <option *ngFor="let cliente of clientes" [ngValue]="cliente"  > {{ cliente.nombre }} </option>
+          </select>
+        </div>
+        <button class="button is-primary is-small" (click)="guardarVenta()" > Registrar</button>
+      </div>
+
+      <div class="container columns m-1" >
+        <div class="column">
+          <i class='bx bxs-cart has-text-success'></i>
+        </div>
+        <div class="column">
+          Producto
+        </div>
+        <div class="column">
+          Costo/U.
+        </div>
+
+        <div class="column">
+          Cant.
+        </div>
+        <div class="column">
+          SubTotal
+        </div>
+      </div>
+
+      <div class="container columns m-1" *ngFor="let item of venta.productos" >
+        <div class="column">
+          <i class='bx bxs-trash has-text-danger'></i>
+        </div>
+        <div class="column">
+          {{item.nombre}}
+        </div>
+        <div class="column">
+          {{item.precio}}
+        </div>
+
+        <div class="column">
+          {{item.cantidad}}
+        </div>
+        <div class="column">
+          {{item.precio * item.cantidad }}
+        </div>
+      </div>
+
+      <div class="container columns m-1" >
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+        <div class="column">
+
+        </div>
+
+        <div class="column">
+         Total
+        </div>
+        <div class="column">
+          {{total()}}
+        </div>
+      </div>
+
+    </article>
+
+
+
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <table class="table">
+          <thead>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productos">
+              <td>{{ producto.nombre }}</td>
+              <td> <input type="text" class="form-control" [(ngModel)]="producto.qty" > </td>
+              <td> <a (click)="addCart(producto)" >  <i class='bx bxs-cart-add has-text-success'></i></a>  </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

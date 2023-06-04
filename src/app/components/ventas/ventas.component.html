@@ -1,0 +1,43 @@
+<div class="card">
+  <header class="card-header">
+    <div class="card-header-title">
+      Ventas :
+      <div class="select is-primary pl-3">
+        <select #selectCliente (change)="getVentas(selectCliente.value)">
+          <option *ngFor="let cliente of clientes" [value]="cliente.id"  > {{ cliente.nombre }} </option>
+        </select>
+      </div>
+
+    </div>
+    <div class="card-header-icon">
+
+    </div>
+  </header>
+
+  <div class="card-content">
+
+    <div class="content">
+        <table class="table">
+          <thead>
+            <th>Nro</th>
+            <th>Cliente</th>
+            <th>Fecha</th>
+            <th>Total</th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let venta of ventas">
+              <td>{{venta.id}}</td>
+              <td>{{venta.cliente.nombre}}</td>
+              <td>{{venta.fecha | date}}</td>
+              <td >{{venta.total | currency: 'Bs. '}}</td>
+              <td>
+                <!-- <a (click)="mostrarVenta(venta.id)"><i class='bx bxs-pencil has-text-link pr-2' ></i></a>
+                <a (click)="borrarVenta(venta.id)" ><i class='bx bxs-trash-alt has-text-danger' ></i> </a> -->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

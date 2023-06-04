@@ -12,6 +12,8 @@ import { HijoComponent } from './components/hijo/hijo.component';
 import { RepetirDirective } from './directives/repetir.directive';
 import { ProductosComponent } from './components/productos/productos.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { VentasComponent } from './components/ventas/ventas.component';
+import { CrearVentaComponent } from './components/crear-venta/crear-venta.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ClientesComponent } from './components/clientes/clientes.component';
     HijoComponent,
     RepetirDirective,
     ProductosComponent,
-    ClientesComponent
+    ClientesComponent,
+    VentasComponent,
+    CrearVentaComponent
   ],
   imports: [
     BrowserModule,

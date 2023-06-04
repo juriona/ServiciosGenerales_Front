@@ -13,6 +13,7 @@ export class ProductoService {
 
 
   }
+
   private header(){
     let header = new HttpHeaders({
       'Content-Type': 'application/json',
