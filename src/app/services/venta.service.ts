@@ -31,4 +31,7 @@ export class VentaService {
   createVenta(data: any){
     return this.http.post(`${this.baseUrl}/clientes/venta`,data,{headers: this.header()})
   }
+  getProductosMasVendidos(): Observable <any>{
+    return this.http.get(`${this.baseUrl}/clientes/venta/productos`,{headers: this.header()})
+  }
 }

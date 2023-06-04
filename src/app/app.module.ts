@@ -14,6 +14,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { CrearVentaComponent } from './components/crear-venta/crear-venta.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CrearVentaComponent } from './components/crear-venta/crear-venta.compon
     ProductosComponent,
     ClientesComponent,
     VentasComponent,
-    CrearVentaComponent
+    CrearVentaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { VentaService } from 'src/app/services/venta.service';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { ProductoService } from 'src/app/services/producto.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-crear-venta',
   templateUrl: './crear-venta.component.html',
@@ -13,7 +14,7 @@ export class CrearVentaComponent {
   productos:Array<any> = []
   cliente: any = {}
   venta: any ={productos:[]}
-  constructor(private _ventaService: VentaService,private _clienteService: ClienteService,private _productoService: ProductoService){
+  constructor(private _ventaService: VentaService,private _clienteService: ClienteService,private _productoService: ProductoService, private router: Router){
     this.getClientes()
     this.getProductos()
   }
@@ -77,7 +78,9 @@ export class CrearVentaComponent {
     }
     this._ventaService.createVenta(payload).subscribe(
       (response)=>{
+
         console.log(response)
+        this.router.navigate(['/ventas']);
       }
     )
   }

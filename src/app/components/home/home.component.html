@@ -1,0 +1,11 @@
+
+<h3 class="title"> Productos Mas Vendidos</h3>
+<div class="columns is-flex is-flex-wrap">
+
+  <div class="card column mr-2 " *ngFor="let producto of productos">
+    <div class="card-content">
+      <div class="subtitle"> <strong> {{ producto.venta | currency:'Bs '}}</strong>   <br>
+        {{producto.nombre}}  </div>
+    </div>
+  </div>
+</div>

@@ -23,29 +23,24 @@
   </div>
 </div>
 <div class="columns">
-  <div class="column is-3">
+  <div class="column is-3 ml-3">
     <!-- menu -->
     <aside class="card column has-background-white ml-3 mr-3 ">
 
       <ul class="menu-list">
-        <li><a class="is-flex is-justify-content-flex-start " [routerLink]="['/']" > <i class='bx bxs-home pr-2 is-align-self-center'></i> Inicio</a></li>
+        <li><a class="is-flex is-justify-content-flex-start " [routerLink]="['/home']" > <i class='bx bxs-home pr-2 is-align-self-center'></i> Inicio</a></li>
         <li><a class="is-flex is-justify-content-flex-start " [routerLink]="['/productos']"> <i class='bx bxs-component pr-2 is-align-self-center'></i> Productos</a></li>
         <li><a class="is-flex is-justify-content-flex-start " [routerLink]="['/clientes']"> <i class='bx bxs-user-rectangle pr-2 is-align-self-center'></i> Clientes</a></li>
         <li><a class="is-flex is-justify-content-flex-start " [routerLink]="['/ventas']"> <i class='bx bx-credit-card pr-2 is-align-self-center'></i> Ventas</a></li>
         <br>
         <li ><a class="button  is-success is-flex is-justify-content-flex-start " [routerLink]="['/ventas/nuevo']"> <i class='bx bx-cart-add pr-2 is-align-self-center'></i> Nueva Venta</a></li>
-        <!-- <button class="button is-success " >
-          <span class="icon ">
-            <i class="bx bx-cart-add"></i>
-          </span>
-          <span> Nueva Venta </span>
-        </button> -->
+
       </ul>
 
     </aside>
   </div>
   <div class="column">
-    <div class="content pl-3 pr-3">
+    <div class="content pr-3">
       <router-outlet></router-outlet>
     </div>
   </div>
